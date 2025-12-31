@@ -69,3 +69,71 @@ func TestCycleBFSInUndirectedGraph(t *testing.T) {
 		})
 	}
 }
+
+func TestCycleDFSInDirectedGraph(t *testing.T) {
+	testCase := []struct {
+		name       string
+		totalNodes int
+		graph      [][]int
+		output     bool
+	}{
+		{
+			name:       "connected directed graph has cycle",
+			totalNodes: 4,
+			graph:      [][]int{{1}, {2}, {3}, {0}},
+			output:     true,
+		},
+		{
+			name:       "connected directed graph has no cycle",
+			totalNodes: 4,
+			graph:      [][]int{{1}, {2, 3}, {3}, {}},
+			output:     false,
+		},
+		/*
+		* more test cases
+		 */
+	}
+
+	for _, tt := range testCase {
+		t.Run(tt.name, func(t *testing.T) {
+			result := isCycleDFSInDirectedGraph(tt.totalNodes, tt.graph)
+			if result != tt.output {
+				t.Errorf("expected %v, got %v", tt.output, result)
+			}
+		})
+	}
+}
+
+func TestCycleBFSInDirectedGraph(t *testing.T) {
+	testCase := []struct {
+		name       string
+		totalNodes int
+		graph      [][]int
+		output     bool
+	}{
+		{
+			name:       "connected directed graph has cycle",
+			totalNodes: 4,
+			graph:      [][]int{{1}, {2}, {3}, {0}},
+			output:     true,
+		},
+		{
+			name:       "connected directed graph has no cycle",
+			totalNodes: 4,
+			graph:      [][]int{{1}, {2, 3}, {3}, {}},
+			output:     false,
+		},
+		/*
+		* more test cases
+		 */
+	}
+
+	for _, tt := range testCase {
+		t.Run(tt.name, func(t *testing.T) {
+			result := isCycleBFSInDirectedGraph(tt.totalNodes, tt.graph)
+			if result != tt.output {
+				t.Errorf("expected %v, got %v", tt.output, result)
+			}
+		})
+	}
+}

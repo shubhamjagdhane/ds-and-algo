@@ -3,7 +3,7 @@ package traversal
 import "container/list"
 
 // n |- int represent the total number of nodes in the graph
-// graph |- [][]int represent children of ith node at ith index
+// graph |- [][]int connected directed graph where ith indicates children of ith node
 func dfs(n int, graph [][]int) []int {
 	result := make([]int, 0, n)
 	visited := make([]bool, n)
@@ -27,7 +27,7 @@ func dfs(n int, graph [][]int) []int {
 }
 
 // n |- int represent the total number of nodes in the graph
-// graph |- [][]int represent children of ith node at ith index
+// graph |- [][]int connected directed graph where ith indicates children of ith node
 func bfs(n int, graph [][]int) []int {
 	result := make([]int, 0, n)
 	visited := make([]bool, n)
