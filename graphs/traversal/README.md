@@ -1,7 +1,7 @@
 ## Traversal of a graph
 
 ### Graph
-![](./graph.png)
+![](../../images/undirected_graph_with_cycle.png)
 
 ### Depth-First-Search
 1. Visit a node
