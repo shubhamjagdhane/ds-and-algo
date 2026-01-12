@@ -27,11 +27,11 @@ func (mh *MinHeap) Pop() any {
 // source |- target is to find the shortest distance of all the vertices from the source vertex src
 func shortestPath(n int, edges [][]int, src int) []int {
 
+	// converting to undirected graph
 	graph := make([][]Node, n)
 	for _, edge := range edges {
 		from, to, wt := edge[0], edge[1], edge[2]
 		graph[from] = append(graph[from], Node{vertex: to, wt: wt})
-		graph[to] = append(graph[to], Node{vertex: from, wt: wt})
 	}
 
 	visited := make([]bool, n)

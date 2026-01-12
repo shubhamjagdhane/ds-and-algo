@@ -15,3 +15,6 @@ Dijkstra's algorithm determines the shortest paths from a starting node to all o
 
 ### Graph-2
 ![graph-2](../../../images/undirected_weighted_graph_2.png)
+
+### Graph-3
+![graph-3](../../../images/directed_connected_graph_1.png)
