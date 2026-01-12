@@ -25,6 +25,7 @@ func TestDFS(t *testing.T) {
 
 	for _, tt := range testCase {
 		t.Run(tt.name, func(t *testing.T) {
+			t.Parallel()
 			result := dfs(tt.totalNodes, tt.graph)
 			if !slices.Equal(tt.output, result) {
 				t.Errorf("expected %v, got %v", tt.output, result)
@@ -50,6 +51,7 @@ func TestBFS(t *testing.T) {
 
 	for _, tt := range testCase {
 		t.Run(tt.name, func(t *testing.T) {
+			t.Parallel()
 			result := bfs(tt.totalNodes, tt.graph)
 			if !slices.Equal(tt.output, result) {
 				t.Errorf("expected %v, got %v", tt.output, result)

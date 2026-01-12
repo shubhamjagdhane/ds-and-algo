@@ -28,6 +28,7 @@ func TestCycleDFSInUndirectedGraph(t *testing.T) {
 
 	for _, tt := range testCase {
 		t.Run(tt.name, func(t *testing.T) {
+			t.Parallel()
 			result := isCycleDFSInUndirectedGraph(tt.totalNodes, tt.graph)
 			if result != tt.output {
 				t.Errorf("expected %v, got %v", tt.output, result)
@@ -62,6 +63,7 @@ func TestCycleBFSInUndirectedGraph(t *testing.T) {
 
 	for _, tt := range testCase {
 		t.Run(tt.name, func(t *testing.T) {
+			t.Parallel()
 			result := isCycleBFSInUndirectedGraph(tt.totalNodes, tt.graph)
 			if result != tt.output {
 				t.Errorf("expected %v, got %v", tt.output, result)
@@ -96,6 +98,7 @@ func TestCycleDFSInDirectedGraph(t *testing.T) {
 
 	for _, tt := range testCase {
 		t.Run(tt.name, func(t *testing.T) {
+			t.Parallel()
 			result := isCycleDFSInDirectedGraph(tt.totalNodes, tt.graph)
 			if result != tt.output {
 				t.Errorf("expected %v, got %v", tt.output, result)
@@ -130,6 +133,7 @@ func TestCycleBFSInDirectedGraph(t *testing.T) {
 
 	for _, tt := range testCase {
 		t.Run(tt.name, func(t *testing.T) {
+			t.Parallel()
 			result := isCycleBFSInDirectedGraph(tt.totalNodes, tt.graph)
 			if result != tt.output {
 				t.Errorf("expected %v, got %v", tt.output, result)

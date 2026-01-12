@@ -24,6 +24,7 @@ func TestFind(t *testing.T) {
 	}
 	for _, tc := range testCases {
 		t.Run(tc.name, func(t *testing.T) {
+			t.Parallel()
 			got := find(tc.x, tc.parent)
 			if got != tc.expected {
 				t.Errorf("expected: %d, got: %d", tc.expected, got)
@@ -64,6 +65,7 @@ func TestUnion(t *testing.T) {
 	}
 	for _, tc := range testCases {
 		t.Run(tc.name, func(t *testing.T) {
+			t.Parallel()
 			union(tc.args.x, tc.args.y, tc.args.parent, tc.args.rank)
 
 			xParent := find(tc.args.x, tc.args.parent)

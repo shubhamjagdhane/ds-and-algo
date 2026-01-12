@@ -32,6 +32,7 @@ func TestTopologicalSortByDFS(t *testing.T) {
 
 	for _, tt := range testCase {
 		t.Run(tt.name, func(t *testing.T) {
+			t.Parallel()
 			result := TopologiclSortByDFS(tt.totalNodes, tt.graph)
 			isValid := false
 			for _, output := range tt.outputs {
@@ -73,6 +74,7 @@ func TestTopologicalSortByBFS(t *testing.T) {
 
 	for _, tt := range testCase {
 		t.Run(tt.name, func(t *testing.T) {
+			t.Parallel()
 			result := TopologiclSortByBFS(tt.totalNodes, tt.graph)
 			isValid := false
 			for _, output := range tt.outputs {
