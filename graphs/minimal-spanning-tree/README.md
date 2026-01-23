@@ -22,6 +22,18 @@ Tree = connected, acyclic
 Minimum = sum of edge weights is minimized
 Think of it as: "Connect all cities with minimum road construction cost"
 
+### Graph-1
+![Graph-1](../../images/minimum_spanning_tree_1.png)
+
+### Graph-2
+![Graph-2](../../images/minimal_spanning_tree_2.png)
+
+## MST Algorithms
+
+1. [Prim's Algorithm](./prim-s-algorithm/)
+2. [Kruskal's Algorithm](./kruskal-s-algorithm/)
+
+
 ## Applications
 Real-World Examples:
 1. Network Design
