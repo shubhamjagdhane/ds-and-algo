@@ -1,16 +1,16 @@
 package disjointsetunion
 
-func find(x int, parent []int) int {
+func Find(x int, parent []int) int {
 	if x == parent[x] {
 		return x
 	}
 
-	parent[x] = find(parent[x], parent)
+	parent[x] = Find(parent[x], parent)
 	return parent[x]
 }
 
-func union(x, y int, parent, rank []int) {
-	xParent, yParent := find(x, parent), find(y, parent)
+func Union(x, y int, parent, rank []int) {
+	xParent, yParent := Find(x, parent), Find(y, parent)
 
 	if rank[xParent] > rank[yParent] {
 		parent[yParent] = xParent
