@@ -1,6 +1,7 @@
 package kruskalsalgorithm
 
 import (
+	disjointsetunion "ds-and-algo/graphs/disjoint-set-union"
 	"sort"
 )
 
@@ -15,16 +16,18 @@ func minimumSpanningTree(n int, edges [][]int) int {
 		return edges[i][2] < edges[j][2]
 	})
 
-	visited := make([]bool, n)
-	sum := 0
-	for _, edge := range edges {
-		from, _, wt := edge[0], edge[1], edge[2]
-		if visited[from] {
-			continue
-		}
-		visited[from] = true
-		sum += wt
-	}
+	parent, rank := make([]int, n), make([]int, n)
 
-	return sum
+	for idx := range parent {
+		parent[idx] = idx
+	}
+	minDist := 0
+	for _, edge := range edges {
+		from, to, wt := edge[0], edge[1], edge[2]
+		if disjointsetunion.Find(from, parent) != disjointsetunion.Find(to, parent) {
+			disjointsetunion.Union(from, to, parent, rank)
+			minDist += wt
+		}
+	}
+	return minDist
 }

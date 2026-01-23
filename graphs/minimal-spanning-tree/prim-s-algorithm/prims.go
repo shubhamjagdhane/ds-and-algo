@@ -37,7 +37,7 @@ func minimumSpanningTree(n int, edges [][]int) int {
 	// starting from the node 0
 	heap.Push(minHeap, Node{val: 0, wt: 0})
 
-	sum := 0
+	minDist := 0
 	visited := make([]bool, n)
 	for minHeap.Len() > 0 {
 		node := heap.Pop(minHeap).(Node)
@@ -46,7 +46,7 @@ func minimumSpanningTree(n int, edges [][]int) int {
 		}
 
 		visited[node.val] = true
-		sum += node.wt
+		minDist += node.wt
 		for _, child := range graph[node.val] {
 			if !visited[child.val] {
 				heap.Push(minHeap, child)
@@ -54,5 +54,5 @@ func minimumSpanningTree(n int, edges [][]int) int {
 		}
 	}
 
-	return sum
+	return minDist
 }
