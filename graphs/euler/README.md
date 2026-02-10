@@ -18,6 +18,17 @@ A `connected undirected` graph has an Euler path (but not circuit) iff:
     a. Exactly 0 or 2 vertices have odd degree 
     b. If 2 vertices have odd degree, they must be the start and end
 
+### Test Diagrams
+
+### Graph-1
+![Graph-1](../../images/euler-1.png)
+
+### Graph-2
+![Graph-2](../../images/euler-2.png)
+
+### Graph-3
+![Graph-3](../../images/euler-3.png)
+
 ### For Directed Graphs:
 1. Euler Circuit Existence:
 A strongly `connected directed` graph has an Euler circuit iff:
@@ -34,10 +45,10 @@ A `connected directed` graph has an Euler path iff:
 ### Test Diagrams
 
 ### Graph-1
-![Graph-1](../../images/euler-1.png)
+![Graph-1](../../images/directed-euler-1.png)
 
 ### Graph-2
-![Graph-2](../../images/euler-2.png)
+![Graph-2](../../images/directed-euler-2.png)
 
 ### Graph-3
-![Graph-3](../../images/euler-3.png)
+![Graph-3](../../images/directed-euler-3.png)
