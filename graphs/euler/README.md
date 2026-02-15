@@ -52,3 +52,14 @@ A `connected directed` graph has an Euler path iff:
 
 ### Graph-3
 ![Graph-3](../../images/directed-euler-3.png)
+
+## Heirholzer's Algorithm
+Hierholzer's algorithm is an efficient method to find an Eulerian path or Eulerian circuit in a graph. An Eulerian path is a trail that visits every edge exactly once, while an Eulerian circuit starts and ends at the same vertex.
+
+### Test Diagrams
+
+### Graph-1
+![Graph-1](../../images/heirholzer-graph-1.png)
+
+### Graph-2
+![Graph-2](../../images/heirholzer-graph-2.png)
